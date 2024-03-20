@@ -4,10 +4,10 @@
 
 A generative AI 4-track mixer powered by [fal.ai musicgen](!https://fal.ai/models/musicgen/api).
 
-* Enter prompts to generate up to four tracks, 8 seconds each
-* Mix them to your liking
-* Listen in your browser or download the wav file to keep working in the DAW of your choice
-* I have like $9.75 balance left in my fal account, go nuts until it runs out 😵
+- Enter prompts to generate up to four tracks, 8 seconds each
+- Mix them to your liking
+- Listen in your browser or download the wav file to keep working in the DAW of your choice
+- I have like $9.75 balance left in my fal account, go nuts until it runs out 😵
 
 ![preview](https://github.com/williamselaine/8seconds/raw/main/assets/8seconds_input.gif)
 

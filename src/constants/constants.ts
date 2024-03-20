@@ -41,19 +41,19 @@ export const EX_RESPONSES = [
     }
   },
   {
-    "audio_url": {
-        "url": "https://storage.googleapis.com/isolate-dev-hot-rooster_toolkit_bucket/github_110602490/22027162407b4f90ac36a796f6fe5938_tmpuavvaom_.wav?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gke-service-account%40isolate-dev-hot-rooster.iam.gserviceaccount.com%2F20240320%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240320T192939Z&X-Goog-Expires=604800&X-Goog-SignedHeaders=host&X-Goog-Signature=1639d51573711532a9a56bfc61ad845d429b0a629c7e956c8b7a359d78c166f05ed739439a1ecbc9deb5a67d4cf8f71c85608c071e86cac63720bf82db43ea1ad4d609a904284ae5ca9ee59df6d834b9342d7ac959b2182f3e814d87d5399c123ff4be16086af52f123fa366930fb02447b2469089cc9ce1ead1cb05199185036d0749cb4e9c55aa52edd8e8df7f5f3b974b6fe063c02f3324331d522cce80f383f129cd0a63657654b201ea18d79e8976d42f9c5765cf1fe27c6744581188a47be335073d5cc2e5d341fd3750c125df233c41bc7af9f072e2b5710a33dfeefc2cf2a589430d7fe88d1665d01c47685b65039344056c48cf98a0b20f862e5c53",
-        "content_type": "audio/x-wav",
-        "file_name": "tmpuavvaom_.wav",
-        "file_size": 1024078
+    audio_url: {
+      url: 'https://storage.googleapis.com/isolate-dev-hot-rooster_toolkit_bucket/github_110602490/22027162407b4f90ac36a796f6fe5938_tmpuavvaom_.wav?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gke-service-account%40isolate-dev-hot-rooster.iam.gserviceaccount.com%2F20240320%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240320T192939Z&X-Goog-Expires=604800&X-Goog-SignedHeaders=host&X-Goog-Signature=1639d51573711532a9a56bfc61ad845d429b0a629c7e956c8b7a359d78c166f05ed739439a1ecbc9deb5a67d4cf8f71c85608c071e86cac63720bf82db43ea1ad4d609a904284ae5ca9ee59df6d834b9342d7ac959b2182f3e814d87d5399c123ff4be16086af52f123fa366930fb02447b2469089cc9ce1ead1cb05199185036d0749cb4e9c55aa52edd8e8df7f5f3b974b6fe063c02f3324331d522cce80f383f129cd0a63657654b201ea18d79e8976d42f9c5765cf1fe27c6744581188a47be335073d5cc2e5d341fd3750c125df233c41bc7af9f072e2b5710a33dfeefc2cf2a589430d7fe88d1665d01c47685b65039344056c48cf98a0b20f862e5c53',
+      content_type: 'audio/x-wav',
+      file_name: 'tmpuavvaom_.wav',
+      file_size: 1024078
     }
   },
   {
-    "audio_url": {
-        "url": "https://storage.googleapis.com/isolate-dev-hot-rooster_toolkit_bucket/github_110602490/b546f45766a94d8c84e1aa10f5092c4a_tmpi8yz0v38.wav?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gke-service-account%40isolate-dev-hot-rooster.iam.gserviceaccount.com%2F20240320%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240320T193056Z&X-Goog-Expires=604800&X-Goog-SignedHeaders=host&X-Goog-Signature=21082be613faeb93a482d110864994bf813370a080e8619bb84c8cc42d07b77fc1a7efaf47bca6e7d40e75c0a2b5d36007200999e88eb880e4c02f0b87f410ec34281a88a42f679edf8a010579feaab2e8616a38d9880243469358e16b60998b4dd196e65da6b439f044b87cb0ecc0a60e61f1047e30ec6fc29b8a163fcba396498c31c7982d7d3e48ca9f615e7aba71906705dd7665960775ba060e9731479bf435cef225f3599c2417e802453fb93dad5b20853b0b4aac33a7a8d1cfb441863b6067b3ce664d059b7156572345e10cee775685676f9c076116d5e2f66e355f88730008a7bb8769aec8e01149c212bc09843420e6ee07175f26e2dc5e76bd53",
-        "content_type": "audio/x-wav",
-        "file_name": "tmpi8yz0v38.wav",
-        "file_size": 1024078
+    audio_url: {
+      url: 'https://storage.googleapis.com/isolate-dev-hot-rooster_toolkit_bucket/github_110602490/b546f45766a94d8c84e1aa10f5092c4a_tmpi8yz0v38.wav?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gke-service-account%40isolate-dev-hot-rooster.iam.gserviceaccount.com%2F20240320%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240320T193056Z&X-Goog-Expires=604800&X-Goog-SignedHeaders=host&X-Goog-Signature=21082be613faeb93a482d110864994bf813370a080e8619bb84c8cc42d07b77fc1a7efaf47bca6e7d40e75c0a2b5d36007200999e88eb880e4c02f0b87f410ec34281a88a42f679edf8a010579feaab2e8616a38d9880243469358e16b60998b4dd196e65da6b439f044b87cb0ecc0a60e61f1047e30ec6fc29b8a163fcba396498c31c7982d7d3e48ca9f615e7aba71906705dd7665960775ba060e9731479bf435cef225f3599c2417e802453fb93dad5b20853b0b4aac33a7a8d1cfb441863b6067b3ce664d059b7156572345e10cee775685676f9c076116d5e2f66e355f88730008a7bb8769aec8e01149c212bc09843420e6ee07175f26e2dc5e76bd53',
+      content_type: 'audio/x-wav',
+      file_name: 'tmpi8yz0v38.wav',
+      file_size: 1024078
     }
   }
 ];

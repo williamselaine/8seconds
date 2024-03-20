@@ -7,5 +7,5 @@ export default defineConfig({
   build: {
     outDir: "dist",
   },
-  base: '/8seconds/',
+  base: "/8seconds/",
 });
