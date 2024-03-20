@@ -1,6 +1,6 @@
 # 8seconds
 
-![preview](https://github.com/williamselaine/8seconds/raw/main/assets/8seconds_playing.gif)
+![preview](https://github.com/williamselaine/8seconds/raw/main/assets/8seconds_1.gif)
 
 A generative AI 4-track mixer powered by [fal.ai musicgen](!https://fal.ai/models/musicgen/api).
 
@@ -9,7 +9,7 @@ A generative AI 4-track mixer powered by [fal.ai musicgen](!https://fal.ai/model
 - Listen in your browser or download the wav file to keep working in the DAW of your choice
 - I have like $9.75 balance left in my fal account, go nuts until it runs out 😵
 
-![preview](https://github.com/williamselaine/8seconds/raw/main/assets/8seconds_input.gif)
+![preview](https://github.com/williamselaine/8seconds/raw/main/assets/8seconds_2.gif)
 
 # React + TypeScript + Vite
 

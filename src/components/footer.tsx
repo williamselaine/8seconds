@@ -93,7 +93,11 @@ function Footer() {
     <div css={styles.parent}>
       <div css={styles.controls}>
         <button css={styles.button} onClick={() => dispatch(actions.toggleIsPlaying())}>
-          {isPlaying ? <PauseOutlined fontSize='large' color='inherit' /> : <PlayArrowOutlined fontSize='large' color='inherit' />}
+          {isPlaying ? (
+            <PauseOutlined fontSize='large' color='inherit' />
+          ) : (
+            <PlayArrowOutlined fontSize='large' color='inherit' />
+          )}
         </button>
         <button css={styles.button} onClick={() => stop()}>
           <StopOutlined fontSize='large' color='inherit' />
