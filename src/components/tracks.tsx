@@ -26,7 +26,7 @@ const styles = createStyles({
 function Tracks() {
   return (
     <div css={styles.parent}>
-      {[...Array(MAX_NUMBER_OF_TRACKS)].map((x, i) => {
+      {[...Array(MAX_NUMBER_OF_TRACKS)].map((_x, i) => {
         return (
           <div css={styles.lane} key={i}>
             <Track index={i} />

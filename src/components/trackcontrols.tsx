@@ -50,7 +50,7 @@ const styles = createStyles({
 function TrackControls({ index, audioNode }: { index: number; audioNode: AudioHub }) {
   const dispatch = useDispatch();
 
-  const setVolume = (e: Event, newValue: number | number[]) => {
+  const setVolume = (_e: Event, newValue: number | number[]) => {
     dispatch(actions.setTrackVolume(index, newValue as number));
   };
 

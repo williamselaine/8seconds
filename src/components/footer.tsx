@@ -1,6 +1,5 @@
 import { AudioHub, createStyles, MixerReducer } from '../types';
 import colors from '../constants/colors';
-import github from '../assets/github.png';
 import { PlayArrow, Pause, Stop, Download, GitHub } from '@mui/icons-material';
 import { useSelector, useDispatch } from 'react-redux';
 import actions from '../redux/actions';
