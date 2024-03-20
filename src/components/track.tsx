@@ -63,7 +63,7 @@ function Track({ index }: { index: number }) {
           <div css={styles.cover} />
           <div css={styles.waveformParent}>
             <span css={styles.title}>{audioNode.title}</span>
-            <Waveform audio={audioNode?.audioResponse?.url} isPrimary={index === 0} index={index} />
+            <Waveform audio={audioNode?.audioResponse?.url} index={index} />
           </div>
         </div>
       )}

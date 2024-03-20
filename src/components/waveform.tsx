@@ -14,14 +14,12 @@ const styles = createStyles({
 
 function Waveform({
   audio,
-  isPrimary = false,
   interact = true,
   color = colors.lightred50,
   height = 'auto',
   index = -1
 }: {
   audio: string | undefined;
-  isPrimary?: boolean;
   interact?: boolean;
   color?: string | string[];
   height?: number | 'auto';
@@ -39,8 +37,8 @@ function Waveform({
     if (containerRef.current && audio) {
       waveSurfer = WaveSurfer.create({
         container: containerRef.current,
-        waveColor: audioNode?.isMuted ? colors.disabledgray : color,
-        progressColor: audioNode?.isMuted ? colors.disabledgray : color,
+        waveColor: color,
+        progressColor: color,
         barWidth: 4,
         interact: interact,
         height: height
@@ -66,23 +64,22 @@ function Waveform({
 
   useEffect(() => {
     if (interact) {
-      waveSurferRef.current?.playPause();
-      if (isPrimary) {
-        if (!isPlaying) {
-          const currentTime = waveSurferRef.current?.getCurrentTime();
-          if (currentTime) {
-            dispatch(actions.setPlaybackTime(currentTime));
-          }
+      isPlaying ? waveSurferRef.current?.play() : waveSurferRef?.current?.pause();
+      if (!isPlaying) {
+        const currentTime = waveSurferRef.current?.getCurrentTime();
+        if (currentTime) {
+          dispatch(actions.setPlaybackTime(currentTime));
         }
       }
     }
-  }, [isPrimary, dispatch, interact, isPlaying]);
+  }, [dispatch, interact, isPlaying]);
 
   useEffect(() => {
+    console.log('playback time changed', playbackTime);
     if (interact) {
       waveSurferRef.current?.setTime(playbackTime);
     }
-  }, [interact, playbackTime]);
+  }, [interact, playbackTime, index]);
 
   useEffect(() => {
     if (interact) {

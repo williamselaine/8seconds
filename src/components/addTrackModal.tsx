@@ -6,7 +6,7 @@ import useOutsideAlerter from '../utils/useOutsideAlerter.js';
 import colors from '../constants/colors';
 import { createStyles, MixerReducer } from '../types';
 import type from '../constants/type.js';
-import { PLACEHOLDERS } from '../constants/constants';
+import { PLACEHOLDERS, IS_TEST_MODE } from '../constants/constants';
 
 const AddTrackModal = () => {
   const focusedTrackIndex = useSelector((state: MixerReducer) => state.focusedTrackIndex);
@@ -108,15 +108,18 @@ const AddTrackModal = () => {
     e.preventDefault();
     dispatch(actions.setLoading(focusedTrackIndex, true));
     dispatch(actions.setModal(false));
-    FalService.fetchAudio(promptText || placeholder, false).then(res =>
+    dispatch(actions.setPlaybackTime(0));
+    FalService.fetchAudio(promptText || placeholder, IS_TEST_MODE).then(res =>
       dispatch(actions.setTrack(res, promptText || placeholder, focusedTrackIndex))
     );
     setPlaceholder(PLACEHOLDERS[Math.floor(Math.random() * PLACEHOLDERS.length)]);
+    setPromptText('');
   };
 
   const cancel = () => {
     dispatch(actions.setModal(false));
     setPlaceholder(PLACEHOLDERS[Math.floor(Math.random() * PLACEHOLDERS.length)]);
+    setPromptText('');
   };
 
   useOutsideAlerter(modalRef, cancel, showModal);

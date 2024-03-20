@@ -1,7 +1,7 @@
 import { AudioHub, createStyles, MixerReducer } from '../types';
 import colors from '../constants/colors';
 import github from '../assets/github.png';
-import { PlayArrow, Pause, Stop, Download } from '@mui/icons-material';
+import { PlayArrow, Pause, Stop, Download, GitHub } from '@mui/icons-material';
 import { useSelector, useDispatch } from 'react-redux';
 import actions from '../redux/actions';
 import Crunker from 'crunker';
@@ -24,6 +24,8 @@ const styles = createStyles({
   link: {
     opacity: 1.0,
     transition: 'opacity 0.5s',
+    color: colors.lightred50,
+    marginRight: '24px',
     '&:hover': {
       opacity: 0.4
     }
@@ -67,7 +69,7 @@ function Footer() {
 
   const download = () => {
     const wavs = Object.values(audio).reduce<string[]>((accumulator: string[], audioHub: AudioHub) => {
-      if (audioHub?.audioResponse?.file_name) {
+      if (audioHub?.audioResponse?.file_name && !audioHub.isMuted) {
         accumulator.push(audioHub.audioResponse.url);
       }
       return accumulator;
@@ -102,7 +104,7 @@ function Footer() {
         </button>
       </div>
       <a css={styles.link} href={GITHUB_URL}>
-        <img css={styles.image} src={github} alt='link' />
+        <GitHub fontSize='large' color='inherit' />
       </a>
     </div>
   );
