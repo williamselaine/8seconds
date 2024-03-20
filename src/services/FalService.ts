@@ -21,7 +21,7 @@ const FalService = {
         logs: true,
         onQueueUpdate: update => {
           if (update.status === 'IN_PROGRESS') {
-            update.logs?.map(log => log.message).forEach(console.log);
+            // update.logs?.map(log => log.message).forEach(console.log);
           }
         }
       });
