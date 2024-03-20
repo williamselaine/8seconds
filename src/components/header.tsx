@@ -7,8 +7,11 @@ import { keyframes } from '@emotion/react';
 
 const shrink = keyframes`
   0%   { width: 100%; }
-  50%  { width: 50%; }
-  100% { width: 0%; }
+  2%  { width: 50%; }
+  4% { width: 0%; }
+  96% { width: 0%; }
+  98% { width: 50%; }
+  100% { width: 100%; }
 `;
 
 const fadeIn = keyframes`
@@ -48,7 +51,8 @@ const styles = createStyles({
     position: 'absolute',
     top: '0px',
     right: '0px',
-    animation: `${shrink} 2s forwards`,
+    animation: `${shrink} 30s ease infinite`,
+    animationDelay: '1s',
     backgroundColor: colors.green,
     zIndex: 1
   }

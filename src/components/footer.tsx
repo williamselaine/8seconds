@@ -1,6 +1,6 @@
 import { AudioHub, createStyles, MixerReducer } from '../types';
 import colors from '../constants/colors';
-import { PlayArrow, Pause, Stop, Download, GitHub } from '@mui/icons-material';
+import { PlayArrowOutlined, PauseOutlined, StopOutlined, FileDownloadOutlined, GitHub } from '@mui/icons-material';
 import { useSelector, useDispatch } from 'react-redux';
 import actions from '../redux/actions';
 import Crunker from 'crunker';
@@ -93,13 +93,13 @@ function Footer() {
     <div css={styles.parent}>
       <div css={styles.controls}>
         <button css={styles.button} onClick={() => dispatch(actions.toggleIsPlaying())}>
-          {isPlaying ? <Pause fontSize='large' color='inherit' /> : <PlayArrow fontSize='large' color='inherit' />}
+          {isPlaying ? <PauseOutlined fontSize='large' color='inherit' /> : <PlayArrowOutlined fontSize='large' color='inherit' />}
         </button>
         <button css={styles.button} onClick={() => stop()}>
-          <Stop fontSize='large' color='inherit' />
+          <StopOutlined fontSize='large' color='inherit' />
         </button>
         <button css={styles.button} onClick={download}>
-          <Download fontSize='large' color='inherit' />
+          <FileDownloadOutlined fontSize='large' color='inherit' />
         </button>
       </div>
       <a css={styles.link} href={GITHUB_URL}>

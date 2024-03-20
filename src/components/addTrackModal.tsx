@@ -68,19 +68,20 @@ const AddTrackModal = () => {
       position: 'absolute',
       bottom: '0px',
       padding: '24px 0px',
-      width: '100%',
+      width: 'calc(100% - 24px)',
       float: 'right',
       display: 'flex',
       justifyContent: 'flex-end'
     },
     button: {
-      width: '80px',
-      height: '32px',
-      margin: '0px 24px',
+      width: '100px',
+      height: '38px',
+      margin: '0px 0px 0px 12px',
       border: `2px solid ${colors.lightred}`,
       color: colors.lightred,
       backgroundColor: 'transparent',
-      font: type.bodySemibold,
+      font: type.body,
+      boxShadow: colors.boxShadowLight,
       '&:hover': {
         opacity: '0.4'
       }
@@ -88,7 +89,7 @@ const AddTrackModal = () => {
     input: {
       width: '100%',
       height: '56px',
-      font: type.bodySemibold,
+      font: type.body,
       color: colors.lightred,
       backgroundColor: 'transparent',
       border: 'none',
@@ -142,7 +143,7 @@ const AddTrackModal = () => {
                 cancel
               </button>
               <button type='submit' css={styles.button} onClick={confirm}>
-                confirm
+                submit
               </button>
             </div>
           </form>
