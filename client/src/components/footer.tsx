@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import actions from '../redux/actions';
 import Crunker from 'crunker';
 
-const GITHUB_URL = 'https://github.com/williamselaine';
+const GITHUB_URL = 'https://github.com/williamselaine/8seconds';
 
 const styles = createStyles({
   parent: {
