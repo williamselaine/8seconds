@@ -1,12 +1,12 @@
 import { useState, createRef, SyntheticEvent } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import actions from '../redux/actions';
-import FalService from '../services/FalService';
+import actions from '../redux/actions.js';
+import FalService from '../services/FalService.js';
 import useOutsideAlerter from '../utils/useOutsideAlerter.js';
-import colors from '../constants/colors';
-import { createStyles, MixerReducer } from '../types';
+import colors from '../constants/colors.js';
+import { createStyles, MixerReducer } from '../types.js';
 import type from '../constants/type.js';
-import { PLACEHOLDERS, IS_TEST_MODE } from '../constants/constants';
+import { PLACEHOLDERS, IS_TEST_MODE } from '../constants/constants.js';
 
 const AddTrackModal = () => {
   const focusedTrackIndex = useSelector((state: MixerReducer) => state.focusedTrackIndex);
@@ -110,12 +110,15 @@ const AddTrackModal = () => {
     dispatch(actions.setLoading(focusedTrackIndex, true));
     dispatch(actions.setModal(false));
     dispatch(actions.setPlaybackTime(0));
-    FalService.fetchAudio(promptText || placeholder, IS_TEST_MODE).then(res =>
-      dispatch(actions.setTrack(res, promptText || placeholder, focusedTrackIndex))
-    );
+    FalService.fetchAudio(promptText || placeholder, IS_TEST_MODE)
+      .then(res => dispatch(actions.setTrack(res, promptText || placeholder, focusedTrackIndex)))
+      .catch((e) => {
+        dispatch(actions.setError(focusedTrackIndex, e));
+        setTimeout(() => {dispatch(actions.clearError())}, 5000);
+     });
     setPlaceholder(PLACEHOLDERS[Math.floor(Math.random() * PLACEHOLDERS.length)]);
     setPromptText('');
-  };
+  }
 
   const cancel = () => {
     dispatch(actions.setModal(false));

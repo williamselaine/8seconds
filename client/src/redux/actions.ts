@@ -34,6 +34,18 @@ const actions = {
       loadingValue: param
     };
   },
+  setError: (index: number, error: string) => {
+    return {
+      type: 'SET_ERROR',
+      audioIndex: index,
+      error: error,
+    }
+  },
+  clearError: () => {
+    return {
+      type: 'CLEAR_ERROR',
+    }
+  },
   setIsPlaying: (isPlaying: boolean) => {
     return {
       type: 'SET_IS_PLAYING',

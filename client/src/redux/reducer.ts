@@ -17,7 +17,8 @@ const defaultState: MixerReducer = {
   ),
   focusedTrackIndex: -1,
   isPlaying: false,
-  playbackTime: 0
+  playbackTime: 0,
+  error: '',
 };
 
 type action = {
@@ -32,6 +33,7 @@ type action = {
   title: string;
   volume: number;
   isMuted: boolean;
+  error: string;
 };
 
 const reducer = (state = defaultState, action: action) => {
@@ -71,6 +73,21 @@ const reducer = (state = defaultState, action: action) => {
         ...state,
         audio: newAudio
       };
+    }
+    case 'SET_ERROR': {
+      const newAudio = { ...state.audio };
+      newAudio[action.audioIndex] = { ...newAudio[action.audioIndex], isLoading: false };
+      return {
+        ...state,
+        error: action.error,
+        audio: newAudio
+      }
+    }
+    case 'CLEAR_ERROR': {
+      return {
+        ...state,
+        error: '',
+      }
     }
     case 'SET_IS_PLAYING': {
       return {

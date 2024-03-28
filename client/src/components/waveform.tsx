@@ -75,7 +75,6 @@ function Waveform({
   }, [dispatch, interact, isPlaying]);
 
   useEffect(() => {
-    console.log('playback time changed', playbackTime);
     if (interact) {
       waveSurferRef.current?.setTime(playbackTime);
     }

@@ -1,0 +1,16 @@
+# Docker Compose File Format Version.
+version: "3.7"
+
+services:
+  proxy:
+    image: williamselaine/eight-seconds-proxy
+    ports:
+      - 3333:3333
+    environment:
+      - FAL_KEY=${FAL_KEY}
+    networks:
+      - web  
+
+networks:
+  web:
+    driver: bridge
