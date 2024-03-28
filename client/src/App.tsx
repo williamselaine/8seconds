@@ -4,6 +4,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Tracks from './components/tracks';
 import AddTrackModal from './components/addTrackModal';
+import Error from './components/error';
 
 const styles = createStyles({
   parent: {
@@ -18,6 +19,7 @@ const styles = createStyles({
 function App() {
   return (
     <div css={styles.parent}>
+      <Error />
       <Header />
       <Tracks />
       <Footer />

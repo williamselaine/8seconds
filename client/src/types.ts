@@ -30,4 +30,5 @@ export type MixerReducer = {
   focusedTrackIndex: number;
   isPlaying: boolean;
   playbackTime: number;
+  error: string;
 };

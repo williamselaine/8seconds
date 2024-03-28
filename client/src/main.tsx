@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import * as fal from '@fal-ai/serverless-client';
-import store from './redux/store';
+import store from './redux/store.ts';
 import { Provider } from 'react-redux';
-import colors from './constants/colors';
+import colors from './constants/colors.ts';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 // only used very sparingly for components that won't accept anything else
