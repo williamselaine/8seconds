@@ -4,6 +4,7 @@ import type from '../constants/type';
 import { HEADER_HEIGHT } from '../constants/constants';
 import Waveform from './waveform';
 import { keyframes } from '@emotion/react';
+import headerAudio from '../../assets/header.wav';
 
 const shrink = keyframes`
   0%   { width: 100%; }
@@ -63,9 +64,9 @@ function Header() {
     <div css={styles.parent}>
       <div css={styles.cover}></div>
       <span css={styles.waveform}>
-        <Waveform audio={import.meta.env.VITE_HEADER_URL} interact={false} color={[colors.purple, colors.lightred30]} height={300} />
+        <Waveform audio={headerAudio} interact={false} color={[colors.purple, colors.lightred30]} height={300} />
       </span>
-      <span css={styles.header}>8seconds</span>
+  <span css={styles.header}>8seconds</span>
     </div>
   );
 }
