@@ -43,8 +43,7 @@ jobs:
         working-directory: ./client
         run: npm run build
         env:
-          VITE_FAL_KEY_ID: ${{secrets.VITE_FAL_KEY_ID}}
-          VITE_FAL_KEY_SECRET: ${{secrets.VITE_FAL_KEY_SECRET}}
+          VITE_PROXY_URL: ${{secrets.VITE_PROXY_URL}}
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
